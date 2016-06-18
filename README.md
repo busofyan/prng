@@ -1,0 +1,1 @@
+pasudo randum namba generyto
