@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Author: busofyan
+Description: app for generating random numbers in a GUI for several clients.
 -->
 <html>
     <head>
         <title>PRNG - Mini Ummah</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body style="background-image: url('img/school.png');">
+        <div class="container" style="background-color: white; height:100vh;">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center; background-image: url('img/grey.png')">
+                    <img id="logo" src="img/logo.png" alt="logo" style="margin-top:15px;">
+                    <h1 style="margin-bottom: 25px; color:darkslategrey;">Brettspiel PRNG</h1>
+                </div>
+                <div class="col-md-12" style="text-align: center; margin-top:45px;">
+                    <button id="generate" class="btn btn-success" style="width:150px;" onclick="generate();">Generieren</button>
+                    <button id="clear" class="btn btn-warning" style="width:150px;" onclick="window.location.reload()">Zurücksetzen</button><br>
+                    <sub style="color:grey">Drücke auf Generieren, um eine zufällige Zahl zu erhalten!</sub>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-success" aria-label="Add Line">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger" aria-label="Remove Line">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <!--<ul class="row dices" style="background-image: url('img/green.png');">
+                <li class="col_empty"></li>
+                <li class="col_dice col_1"></li>
+                <li class="col_dice col_2"></li>
+                <li class="col_dice col_3"></li>
+                <li class="col_dice col_4"></li>
+                <li class="col_dice col_5"></li>
+                <li class="col_dice col_6"></li>
+                <li class="col_dice col_7"></li>
+                <li class="col_dice col_8"></li>
+                <li class="col_empty"></li>
+            </ul>-->
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/random.js"></script>
     </body>
 </html>
